@@ -1,0 +1,44 @@
+.products-grid{
+	.product-item-info {
+		position: relative;
+		.ndr-label-image {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			z-index: 2;
+			width: 80px;
+		}
+		&:hover {
+			.ndr-label-image {
+				top: 9px;
+				right: 9px;
+			}
+		}
+	}
+}
+
+.product.media {
+	position: relative;
+	.ndr-label-image {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		z-index: 1;
+		width: 80px;
+	}
+}
+
+@media screen and (max-width:767px) {
+	.products-grid{
+		.product-item-info {
+			.ndr-label-image {
+				width: 80px;
+			}
+		}
+	}
+	.product.media {
+		.ndr-label-image {
+			width: 80px;
+		}
+	}
+}

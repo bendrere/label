@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Ndr_Label::ndr_label"
+             title="Product Label"
+             module="Ndr_Label"
+             sortOrder="50"
+             resource="Ndr_Label::ndr_label"
+             action="ndr_label/label" />
+    </menu>
+</config>

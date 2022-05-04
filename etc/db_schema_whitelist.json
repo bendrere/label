@@ -1,0 +1,14 @@
+{
+    "ndr_product_label": {
+        "column": {
+            "label_id": true,
+            "label_image": true,
+            "name": true,
+            "category": true,
+            "conditions_serialized": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}
