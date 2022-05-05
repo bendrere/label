@@ -75,7 +75,7 @@ class Conditions extends Generic implements TabInterface
     /**
      * @return bool
      */
-    public function canShowTab()
+    public function canShowTab(): bool
     {
         return true;
     }
@@ -83,7 +83,7 @@ class Conditions extends Generic implements TabInterface
     /**
      * @return false
      */
-    public function isHidden()
+    public function isHidden(): bool
     {
         return false;
     }
@@ -107,7 +107,7 @@ class Conditions extends Generic implements TabInterface
     /**
      * @return false
      */
-    public function isAjaxLoaded()
+    public function isAjaxLoaded(): bool
     {
         return false;
     }
@@ -115,7 +115,7 @@ class Conditions extends Generic implements TabInterface
     /**
      * @return Conditions
      */
-    protected function _prepareForm()
+    protected function _prepareForm(): Conditions
     {
         $model = $this->_coreRegistry->registry('Ndr_Label');
 
@@ -127,12 +127,12 @@ class Conditions extends Generic implements TabInterface
 
     /**
      * @param $model
-     * @param $fieldsetId
-     * @param $formName
+     * @param string $fieldsetId
+     * @param string $formName
      * @return \Magento\Framework\Data\Form
      * @throws \Magento\Framework\Exception\LocalizedException
      */
-    protected function addTabToForm($model, $fieldsetId = 'conditions_fieldset', $formName = 'ndr_label_form')
+    protected function addTabToForm($model, string $fieldsetId = 'conditions_fieldset', string $formName = 'ndr_label_form')
     {
         $form = $this->_formFactory->create();
         $form->setHtmlIdPrefix('rule_');

@@ -58,7 +58,7 @@ class Collection extends LabelCollection implements SearchResultInterface
     /**
      * @return AggregationInterface
      */
-    public function getAggregations()
+    public function getAggregations(): AggregationInterface
     {
         return $this->aggregations;
     }
@@ -85,7 +85,7 @@ class Collection extends LabelCollection implements SearchResultInterface
      * @param \Magento\Framework\Api\SearchCriteriaInterface|null $searchCriteria
      * @return $this|Collection
      */
-    public function setSearchCriteria(\Magento\Framework\Api\SearchCriteriaInterface $searchCriteria = null)
+    public function setSearchCriteria(\Magento\Framework\Api\SearchCriteriaInterface $searchCriteria = null): Collection
     {
         return $this;
     }
@@ -94,7 +94,7 @@ class Collection extends LabelCollection implements SearchResultInterface
     /**
      * @return int
      */
-    public function getTotalCount()
+    public function getTotalCount(): int
     {
         return $this->getSize();
     }
@@ -104,7 +104,7 @@ class Collection extends LabelCollection implements SearchResultInterface
      * @param $totalCount
      * @return $this|Collection
      */
-    public function setTotalCount($totalCount)
+    public function setTotalCount($totalCount): Collection
     {
         return $this;
     }
@@ -113,7 +113,7 @@ class Collection extends LabelCollection implements SearchResultInterface
      * @param array|null $items
      * @return $this|Collection
      */
-    public function setItems(array $items = null)
+    public function setItems(array $items = null): Collection
     {
         return $this;
     }

@@ -53,7 +53,7 @@ class LabelProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
      * @param array $meta
      * @return array
      */
-    public function prepareMeta(array $meta)
+    public function prepareMeta(array $meta): array
     {
         return $meta;
     }
@@ -63,7 +63,7 @@ class LabelProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
      *
      * @return array
      */
-    public function getData()
+    public function getData(): array
     {
         if (isset($this->loadedData)) {
             return $this->loadedData;
@@ -89,7 +89,7 @@ class LabelProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
      * @return string
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      */
-    public function getMediaUrl()
+    public function getMediaUrl(): string
     {
         $mediaUrl = $this->storeManager->getStore()
                 ->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA) . 'ndr/label_image/';

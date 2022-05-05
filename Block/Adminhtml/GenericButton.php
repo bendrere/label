@@ -41,11 +41,11 @@ class GenericButton
     }
 
     /**
-     * @param $route
-     * @param $params
+     * @param string $route
+     * @param array $params
      * @return string
      */
-    public function getUrl($route = '', $params = []): string
+    public function getUrl(string $route = '', array $params = []): string
     {
         return $this->urlBuilder->getUrl($route, $params);
     }

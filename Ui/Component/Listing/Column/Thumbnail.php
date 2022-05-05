@@ -58,7 +58,7 @@ class Thumbnail extends \Magento\Ui\Component\Listing\Columns\Column
      * @return array
      * @throws \Magento\Framework\Exception\NoSuchEntityException
      */
-    public function prepareDataSource(array $dataSource)
+    public function prepareDataSource(array $dataSource): array
     {
         if (isset($dataSource['data']['items'])) {
             $fieldName = $this->getData('name');

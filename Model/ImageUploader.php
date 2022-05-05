@@ -156,7 +156,7 @@ class ImageUploader
      * @param $imageName
      * @return string
      */
-    public function getFilePath($path, $imageName)
+    public function getFilePath($path, $imageName): string
     {
         return rtrim($path, '/') . '/' . ltrim($imageName, '/');
     }

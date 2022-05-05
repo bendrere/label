@@ -27,7 +27,7 @@ class File extends AbstractModifier
      * @param array $meta
      * @return array
      */
-    public function modifyMeta(array $meta)
+    public function modifyMeta(array $meta): array
     {
         $fieldCode = 'label_image';
         $elementPath = $this->arrayManager->findPath($fieldCode, $meta, null, 'children');
@@ -60,7 +60,7 @@ class File extends AbstractModifier
      * @param array $data
      * @return array
      */
-    public function modifyData(array $data)
+    public function modifyData(array $data): array
     {
         return $data;
     }

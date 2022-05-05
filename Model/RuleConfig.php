@@ -35,7 +35,7 @@ class RuleConfig
      * @param $_product
      * @return int
      */
-    public function getLastAppiledRuleId($_product)
+    public function getLastAppiledRuleId($_product): int
     {
 
         $ruleCollection = $this->collectionFactory->create()

@@ -103,7 +103,7 @@ class Label extends AbstractModel implements LabelInterface
      * @param $condition
      * @return Label
      */
-    public function setConditionsSerialized($condition)
+    public function setConditionsSerialized($condition): Label
     {
         return $this->setData(self::CONDITIONS_SERIALIZED, $condition);
     }

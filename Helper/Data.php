@@ -17,12 +17,6 @@ use Magento\Store\Model\ScopeInterface;
 
 class Data extends AbstractHelper
 {
-
-    /**
-     *path to config
-     */
-    const CONFIG_MODULE_PATH = 'ndr_label/';
-
     /**
      * @param $field
      * @param $storeId
