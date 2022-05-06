@@ -8,25 +8,10 @@ use Ndr\Label\Model\ResourceModel\Label\CollectionFactory;
 class LabelProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
 {
 
-    /**
-     * @var \Ndr\Label\Model\ResourceModel\Label\Collection
-     */
     protected $collection;
 
-    /**
-     * @var
-     */
     protected $loadedData;
 
-    /**
-     * @param $name
-     * @param $primaryFieldName
-     * @param $requestFieldName
-     * @param CollectionFactory $pageCollectionFactory
-     * @param StoreManagerInterface $storeManager
-     * @param array $meta
-     * @param array $data
-     */
     public function __construct(
         $name,
         $primaryFieldName,
@@ -49,21 +34,13 @@ class LabelProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
         );
     }
 
-    /**
-     * @param array $meta
-     * @return array
-     */
-    public function prepareMeta(array $meta): array
+    public function prepareMeta(array $meta)
     {
         return $meta;
     }
 
-    /**
-     * Get data
-     *
-     * @return array
-     */
-    public function getData(): array
+
+    public function getData()
     {
         if (isset($this->loadedData)) {
             return $this->loadedData;
@@ -85,11 +62,7 @@ class LabelProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
     }
 
 
-    /**
-     * @return string
-     * @throws \Magento\Framework\Exception\NoSuchEntityException
-     */
-    public function getMediaUrl(): string
+    public function getMediaUrl()
     {
         $mediaUrl = $this->storeManager->getStore()
                 ->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA) . 'ndr/label_image/';

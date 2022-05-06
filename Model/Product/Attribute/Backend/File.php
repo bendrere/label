@@ -71,7 +71,7 @@ class File extends \Magento\Eav\Model\Entity\Attribute\Backend\AbstractBackend
      */
     public function afterSave($object)
     {
-        if ($this->request->getModuleName() != 'ndr_Label') {
+        if ($this->request->getModuleName() != 'ndr_label') {
             $path = $this->_filesystem->getDirectoryRead(
                 DirectoryList::MEDIA
             )->getAbsolutePath(
